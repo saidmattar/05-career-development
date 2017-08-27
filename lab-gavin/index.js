@@ -22,4 +22,6 @@ const List = require('./lib/list.js');
 // }
 
 let yoho = new List('Gavin', 'Nichole', 'alex');
-yoho.slice(2, 1);
+console.log(yoho);
+let x = yoho.slice(1, 1);
+console.log('this is x', x);
