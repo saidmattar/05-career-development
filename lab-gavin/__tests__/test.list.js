@@ -87,6 +87,14 @@ describe('Testing List and associated methods', () => {
       let result = list.reduce((a, c) => a + c);
       expect(result).toEqual('3GavinIsTheBest');
     });
+    test('It should return sum of all numbers concatenated onto string', () => {
+      let list = new List();
+      list.push(1);
+      list.push(2);
+      list.push('GavinIsTheBest');
+      let result = list.reduce((a, c ) => a + c);
+      expect(result).toEqual('3GavinIsTheBest');
+    });
     test('It should return all names concatenated back together', () => {
       let list = new List();
       list.push('Gavin');
@@ -115,17 +123,6 @@ describe('Testing List and associated methods', () => {
     });
   });
 
-  // describe('#forEach', () => {
-  //   test('It should return original array with callback method applies', () => {
-  //     let list = new List;
-  //     // list = [3,4,5];
-  //     list.push(3);
-  //     list.push(8);
-  //     list.push(10);
-  //     // let newList = [];
-  //     expect(list.forEach(ele => ele * 2)).toEqual([6, 8, 10]);
-  //   });
-  // });
   describe('#map', () => {
     test('It should return an altered list', () => {
       let list = [1,2,3];
@@ -139,7 +136,7 @@ describe('Testing List and associated methods', () => {
     });
     test('It should return an altered list', () => {
       let list = [true,false,2];
-      expect(list.map((x)=>x + 2)).toEqual(['hi', 'im', 'gavin']);
+      expect(list.map((x)=>x + 2)).toEqual([3, 2, 4]);
     });
   });
 });
