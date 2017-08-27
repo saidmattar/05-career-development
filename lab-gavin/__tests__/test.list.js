@@ -137,5 +137,9 @@ describe('Testing List and associated methods', () => {
       let list = ['ih','mi','nivag'];
       expect(list.map((x)=>x.split('').reverse().join(''))).toEqual(['hi', 'im', 'gavin']);
     });
+    test('It should return an altered list', () => {
+      let list = [true,false,2];
+      expect(list.map((x)=>x + 2)).toEqual(['hi', 'im', 'gavin']);
+    });
   });
 });
