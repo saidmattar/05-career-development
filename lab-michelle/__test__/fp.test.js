@@ -1,15 +1,12 @@
 'use strict';
 
 const fp = require('../lib/fp');
-// const fs = require('fs');
-
 
 describe('Testing methods in fp.js', function() {
   describe('Testing Push', () => {
     test('should return (1,2,3,4) given (1,2,3) & 4', () => {
-      let usingList = new List(1, 2, 3)
-      let pushing = fp.push();
-      expect(usingList.pushing(4)).toEqual(1,2,3,4);
+      let ListOne = new List (1, 2, 3);
+      expect(List.push(4)).toEqual(1,2,3,4);
     });
   });
 });
