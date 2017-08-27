@@ -1,12 +1,31 @@
 'use strict';
 
-const fp = require('../lib/fp');
+const List = require('../lib/fp.js');
 
 describe('Testing methods in fp.js', function() {
   describe('Testing Push', () => {
     test('should return (1,2,3,4) given (1,2,3) & 4', () => {
-      let ListOne = new List (1, 2, 3);
-      expect(List.push(4)).toEqual(1,2,3,4);
+      let listOne = new List (1,2,3);
+      listOne.push(4);
+      expect(listOne[3]).toEqual(4);
+    });
+    test('should return meep', ()=> {
+      let listTwo = new List (1, 2, Infinity);
+      listTwo.push('meep');
+      expect(listTwo[3]).toEqual('meep');
+    });
+    test('should return true', ()=> {
+      let listThree = new List ('do not talk about fight club');
+      listThree.push(true);
+      expect(listThree[1]).toEqual(true
+      );
+    });
+    describe('Testing Pop', () => {
+      test('should return something', ()=> {
+        let listOne = new List('happy', 'sad', 'confused', 'sleepy', 'hungry');
+        listOne.pop('hungry');
+        expect(listOne.length).toEqual(4);
+      });
     });
   });
 });
