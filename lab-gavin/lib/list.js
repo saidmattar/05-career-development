@@ -9,17 +9,11 @@ const List = module.exports = function() {
   this.length = arguments.length;
 };
 
-// This is a pure method
-// List.prototype.push = function(value) {
-  //   let newList = Object.create(this)
-  //   newList[newList.length++] = value
-  //   return newList
-  // }
 
-// This in not a pure method - modifies the original
+
+//PUSH
 List.prototype.push = function(value) {
   this[this.length++] = value;
-  // this[this.length + 1] = value // Not what we want - does not increment the value of length
   return this;
 };
 
@@ -30,13 +24,6 @@ List.prototype.pop = function() {
   return result;
 };
 
-
-//FOREACH
-// List.prototype.forEach = function(callback) {
-//   for(let i = 0; i < this.length; i++) {
-//     callback(this[i], i, this);
-//   }
-// };
 
 //MAP
 List.prototype.map = function(callback){
@@ -63,9 +50,6 @@ List.prototype.reduce = function(acc, curr) {
   if(!curr) {
     result = this[0];
     start = 1;
-  } else {
-    result = curr;
-    start = 0;
   }
   for(var i = start; i < this.length; i++) {
     result = acc(result, this[i]);
