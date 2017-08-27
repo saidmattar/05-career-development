@@ -32,10 +32,18 @@ List.prototype.pop = function() {
 
 
 //FOREACH
-List.prototype.forEach = function(callback) {
-  for(let i = 0; i < this.length; i++) {
-    callback(this[i], i, this);
+// List.prototype.forEach = function(callback) {
+//   for(let i = 0; i < this.length; i++) {
+//     callback(this[i], i, this);
+//   }
+// };
+
+//MAP
+List.prototype.map = function(callback){
+  let list = new List;
+  for (var i = 0; i < this.length; i++) { list.push(callback(this[i]));
   }
+  return list;
 };
 
 
