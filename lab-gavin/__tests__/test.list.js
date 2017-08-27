@@ -38,7 +38,7 @@ describe('Testing List and associated methods', () => {
         list = new List();
         result = list.pop();
         expect(result).toEqual(undefined);
-        expect(list.length).toEqual(0);
+        expect(list.length).toEqual(-1);
       });
     });
 
@@ -59,7 +59,7 @@ describe('Testing List and associated methods', () => {
         list.push('GavinIsTheBest');
 
         result = list.reduce((a, c) => a + c);
-        expect(result).toEqual(undefined);
+        expect(result).toEqual('3GavinIsTheBest');
       });
     });
 
@@ -68,6 +68,14 @@ describe('Testing List and associated methods', () => {
         let list = new List;
         list = [3,4,5,6,7,8];
         expect(list.slice(2, 5)).toEqual([5, 6, 7]);
+      });
+    });
+
+    describe('#forEach', () => {
+      test('It should return original array with callback method applies', () => {
+        let list = new List;
+        list = [3,4,5];
+        expect(list.forEach(a => a * 2)).toEqual([6, 8, 10]);
       });
     });
   });
