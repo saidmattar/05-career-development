@@ -48,10 +48,32 @@ List.prototype.filter = function(callback) {
 };
 
 //MAP
+// Syntax from MDN: var new_array = arr.map(function callback(currentValue, index, array) {
+//     // Return element for new_array
+// }[, thisArg])
 
+List.prototype.map = function(callback) {
+  let new_array = [];
+  for(let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) {
+      new_array[i] = this[i];
+    }
+  }
+};
 
 //REDUCE
+//Syntax from MDN: arr.reduce(callback[, initialValue])
+//callback is basically acc, current, current Index, array
 
+List.prototype.reduce = function(callback) {
+  let singleValueReturn;
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) {
+      singleValueReturn += this[i];
+    }
+  }
+  return singleValueReturn;
+};
 
 //SLICE - not complete
 List.prototype.slice = function(start, stop) {
