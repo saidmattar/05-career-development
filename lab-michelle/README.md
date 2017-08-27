@@ -1,6 +1,8 @@
 # Most Amazing README of all Time
 :crown: _imma let you finish but this readme is the best readme of all time...of all time!_ :crown:
 
+![gif of kanye](https://media.giphy.com/media/l8Fx1Vt8fm57W/giphy.gif)
+
 ## Lab Description
 **Lab 5** included a UI Challenge and some data structure challenges.
 
