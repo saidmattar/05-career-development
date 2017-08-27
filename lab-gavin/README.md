@@ -6,9 +6,9 @@
 Using vanilla Javascript I wrote custom methods to be used with an list Object Constructor that we built in class. These new methods serve as the traditional push, pop, map, filter, reduce, and slice methods.
 
 ## Table of Contents
-+ [Methods](#Methods)
-+ [Usage](#Usage)
-+ [About](#About)
++ [Methods](#methods)
++ [Usage](#usage)
++ [About](#about)
 
 ### Methods:
 + new List();
