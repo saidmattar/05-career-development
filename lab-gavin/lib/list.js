@@ -1,5 +1,6 @@
 'use strict';
 
+
 const List = module.exports = function() {
   // console.log('args', arguments)
   for(let key in arguments) {
@@ -22,34 +23,44 @@ List.prototype.push = function(value) {
   return this;
 };
 
+//POP
 List.prototype.pop = function() {
   let result = this[this.length - 1];
   delete this[--this.length];
   return result;
 };
 
+
+//FOREACH
 List.prototype.forEach = function(callback) {
   for(let i = 0; i < this.length; i++) {
     callback(this[i], i, this);
   }
 };
 
-List.prototype.slice = function(start, stop) {
-  let counter = 0;
-  let z = [];
-  while (counter < stop ){
-    for(var i = 0; i <this.length; i++){
-      if (this.key[i] === start) {
-        z.push(this.key[i]);
-        delete this.key[i];
-        counter++;
-      }
-    }
-  }
-  return z;
 
+//SLICE
+List.prototype.slice = function (arg, arg1) {
+  let result = [];
+  for (var i = arg; i < arg1; i++) {
+    result.push(this[i]);
+  }
+  return result;
 };
 
-// list.forEach((ele, idx, arr) => {
+//REDUCE
+List.prototype.reduce = function(acc, curr) {
+  let result, start;
 
-// })
+  if(!curr) {
+    result = this[0];
+    start = 1;
+  } else {
+    result = curr;
+    start = 0;
+  }
+  for(var i = start; i < this.length; i++) {
+    result = acc(result, this[i]);
+  }
+  return result;
+};
