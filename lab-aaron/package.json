@@ -1,0 +1,14 @@
+{
+  "name": "lab-aaron",
+  "version": "1.0.0",
+  "description": "lab",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "",
+  "license": "ISC"
+}
