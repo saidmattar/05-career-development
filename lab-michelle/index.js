@@ -1,8 +1,8 @@
 'use strict';
-
-let listNums = new List(1, 2, 3);
-let newList = listNums.reduce();
-console.log(newList);
+// 
+// let listNums = new List(1, 2, 3);
+// let newList = listNums.reduce();
+// console.log(newList);
 // let listLetters = new List('a', 'b', 'c');
 // let listMixed = new List('1', 1, true, Infinity);
 //
