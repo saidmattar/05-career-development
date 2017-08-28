@@ -3,7 +3,7 @@
 const List = require('../lib/fp.js');
 
 describe('Testing List Module:', function() {
-  beforeAll(() => this.list = new List())
+  beforeAll(() => this.list = new List());
 });
 
 describe('Testing methods in fp.js', function() {
@@ -40,30 +40,45 @@ describe('Testing methods in fp.js', function() {
         expect(listOne[3]).toEqual({});
       });
     });
-    //IS THIS METHOD NOT WORKING??
+    //TESTING MAP - NOT FUNCTIONAL
+    describe('Testing Map', () => {
+      test('should return 2, 4, 6', ()=> {
+        let listOne = new List(1, 2, 3);
+        let callback = listOne.myMap((ele) => ele*2);
+        //so annoying, it has to be something like that ^
+        expect(callback).toEqual(2, 4, 6);
+      });
+    });
+    //TEST FOR FOREACH IS NOT WORKING SO I STOPPED WORKING ON IT - I can't figure out where to put the callback in here
     describe('Testing forEach', () => {
       test('should return 2, 4, 6', ()=> {
         let listOne = new List(1, 2, 3);
-        let cb = this[i]*2;
-        listOne.myforEach(cb);
-        expect(listOne).toEqual(2, 4, 6);
+        let callback = listOne.myForEach((ele) => ele*2);
+        //so annoying, it has to be something like that ^
+        expect(callback).toEqual(2, 4, 6);
       });
     });
-    //IS THIS METHOD NOT WORKING??
-    describe('Testing filter', () => {
-      test('should return 2, 466, 66', ()=> {
+    //FILTER - TEST NOT WORKING SO I STOPPED WORKING ON IT - again, not sure where the callback should live
+    describe('Testing Filter', () => {
+      test('should return 46, 66, 666', ()=> {
         let listOne = new List(2, 46, 66, 666);
-        let callback = listOne.contains(6);
-        listOne.myforEach(callback);
-        expect(listOne).toEqual(46, 66, 666);
+        let callback = listOne.myFilter((ele) => ele > 10);
+        expect(callback).toEqual(46, 66, 666);
       });
     });
-    //IS REDUCE NOT WORKING??
+    //IS REDUCE NOT WORKING?? UGHHHHHHHHH
     describe('Testing Reduce', () => {
-      test('should return 4', ()=> {
+      test('should return 1', ()=> {
         let listOne = new List(1, 2, 3);
-        listOne.myReduce();
-        expect(listOne.length).toEqual(1);
+        let callback = listOne.myReduce();
+        expect(callback).toEqual(1);
+      });
+    });
+    //IS SLICE NOT WORKING? SEEMS LIKE IT SHOULD
+    describe('Testing Slice', () => {
+      test('should return 1, 2', ()=> {
+        let listOne = new List(1, 2, 3);
+        expect(listOne.mySlice(0,1)).toEqual(1,2);
       });
     });
   });

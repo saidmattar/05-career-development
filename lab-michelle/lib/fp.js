@@ -75,18 +75,11 @@ List.prototype.myReduce = function(callback) {
   return singleValueReturn;
 };
 
-//SLICE - not complete
+//SLICE - adjusted this from what we had in class as a group to make more sense with start/stop. 
 List.prototype.mySlice = function(start, stop) {
-  let counter = 0;
   let z = [];
-  while (counter < stop ){
-    for(var i = 0; i <this.length; i++){
-      if (this.key[i] === start) {
-        z.push(this.key[i]);
-        delete this.key[i];
-        counter++;
-      }
-    }
+  for(var i = start; i < stop; i++){
+    z.push(this[i]);
   }
   return z;
 };

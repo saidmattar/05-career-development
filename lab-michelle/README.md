@@ -10,6 +10,7 @@
 + **Instructions:** Create a List constructor that is a replacement for Arrays
 Add push, pop, map, filter, reduce, and slice methods to the constructor.
 + See lib/fp.js for methods
++ I tried to write tests but honestly I have no idea where the callbacks for anything that uses callbacks are supposed to go. So do any of these methods work???
 
 ## UI Challenge
 [Completed Codepen Link Here](https://codepen.io/mscharlock/pen/xLaybM)
