@@ -12,13 +12,13 @@ const List = module.exports = function() {
 
 
 //PUSH
-List.prototype.push = function(value) {
+List.prototype.myPush = function(value) {
   this[this.length++] = value;
   return this;
 };
 
 //POP
-List.prototype.pop = function() {
+List.prototype.myPop = function() {
   let result = this[this.length - 1];
   delete this[--this.length];
   return result;
@@ -35,7 +35,7 @@ List.prototype.map = function(callback){
 
 
 //SLICE
-List.prototype.slice = function (arg, arg1) {
+List.prototype.mySlice = function (arg, arg1) {
   let result = [];
   for (var i = arg; i < arg1; i++) {
     result.push(this[i]);
