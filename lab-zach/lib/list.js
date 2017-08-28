@@ -8,6 +8,8 @@ const List = module.exports = function() {
   this.length = arguments.length
 }
 
+let newList = new List('zach', 1 , 'katherine', 401);
+
 // This is a pure method (FUNCTIONAL after lecture)
 List.prototype.pushPure = function(value) {
   let newList = Object.assign({}, this)
@@ -34,24 +36,27 @@ List.prototype.forEach = function(callback) {
   }
 }
 
-List.prototype.slice = function(start, stop) {
- let counter = 0;
- let z = [];
- while (counter < stop ){
-   for(var i = 0; i <this.length; i++){
-     if (this.key[i] === start) {
-      z.push(this.key[i]);
-      delete this.key[i];
-      counter++;
-       }
-     }
-   }
-   return z;
-}
-
-List.prototype.map = function (arr, callback, arg) {
-  arr = [];
-  for (let i = 0; i < this.length; i++) {
-    return arg(callback(this[i], i, this))
+List.prototype.slice = function (arg, arg1) {
+  let result = [];
+  for (var i = arg; i < arg1; i++) {
+    result.push(this[i])
   }
-}; 
+  return result;
+};
+
+List.prototype.map = function (callback) {
+  arr = {};
+  for (let i = 0; i < this.length; i++) {
+    let arr = callback([this[i], i, this])
+  }
+};
+
+List.prototype.filter = () => {
+  let result = {};
+  for (let i in this) {
+    if (callback(this[i], i, this)) {
+      result[i] = this[i];
+    }
+  }
+  return result;
+};
