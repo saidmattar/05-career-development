@@ -122,19 +122,16 @@ describe('Testing List and associated methods', () => {
 
   describe('#map', () => {
     test('It should return an altered list', () => {
-      // let list = [1,2,3];
       let list = new List(1,2,3);
       let result = list.myMap((x) => x * 2);
       expect(list.myMap((x) => x *2 )).toEqual({'0': 2, '1': 4, '2': 6, 'length': 3});
       expect(result.length).toBe(3);
     });
     test('It should return an altered list', () => {
-      // let list = ['ih','mi','nivag'];
       let list = new List('ih','mi','nivag');
       expect(list.myMap((x)=>x.split('').reverse().join(''))).toEqual({'0': 'hi', '1': 'im', '2': 'gavin', 'length': 3});
     });
     test('It should return an altered list', () => {
-      // let list = [true,false,2];
       let list = new List(true,false,2);
       expect(list.myMap((x)=>x + 2)).toEqual({'0': 3, '1': 2, '2': 4, 'length': 3});
     });
