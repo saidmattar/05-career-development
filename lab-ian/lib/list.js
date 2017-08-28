@@ -2,7 +2,6 @@
 
 
 const List = module.exports = function() {
-  // console.log('args', arguments)
   for(let key in arguments) {
     this[key] = arguments[key]
   }
