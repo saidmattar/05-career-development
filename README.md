@@ -33,5 +33,10 @@
 ## Test 
 * Test the list constructor and all of its methods
 
+## Rubric 10pts 
+* CSS Wireframe: 2pts
+* List methods: 5pts
+* Tests: 3pts
+
 ## Bonus 2pts
 * Implement map and filter using reduce
