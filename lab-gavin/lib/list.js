@@ -26,9 +26,9 @@ List.prototype.myPop = function() {
 
 
 //MAP
-List.prototype.map = function(callback){
+List.prototype.myMap = function(callback){
   let list = new List;
-  for (var i = 0; i < this.length; i++) { list.push(callback(this[i]));
+  for (var i = 0; i < this.length; i++) { list.myPush(callback(this[i]));
   }
   return list;
 };
