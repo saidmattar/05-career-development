@@ -136,4 +136,24 @@ describe('Testing List and associated methods', () => {
       expect(list.myMap((x)=>x + 2)).toEqual({'0': 3, '1': 2, '2': 4, 'length': 3});
     });
   });
+  describe('#filter', () => {
+    test('It should append a string to the list', () => {
+      let list = new List;
+      list.myPush('MyNameIsGavinAndILiketests');
+      expect(list[0]).toEqual('MyNameIsGavinAndILiketests');
+      expect(list.length).toEqual(1);
+    });
+    test('It should append an integer to the list', () => {
+      let list = new List;
+      list.myPush(23453);
+      expect(list[0]).toEqual(23453);
+      expect(list.length).toEqual(1);
+    });
+    test('It should append a boolean value to the list', () => {
+      let list = new List;
+      list.myPush(true);
+      expect(list[0]).toEqual(true);
+      expect(list.length).toEqual(1);
+    });
+  });
 });

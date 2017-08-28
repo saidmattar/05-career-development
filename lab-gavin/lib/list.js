@@ -56,3 +56,13 @@ List.prototype.reduce = function(acc, curr) {
   }
   return result;
 };
+
+//FILTER
+List.prototype.filter= function(callback){
+  let result = new List();
+  for (let i =0; i<this.length; ++i){
+    if(callback(this[i], i, this)){
+      result[result.length++] = this[i];
+    }
+  }
+};
