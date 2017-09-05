@@ -5,13 +5,14 @@
     "no-console": "off",
     "indent": [ "error", 2 ],
     "semi": ["error", "always"],
-    "linebreak-style": [ "error", "unix" ]
+    "linebreak-style": [ "error", "windows" ]
   },
   "env": {
     "es6": true,
     "node": true,
     "mocha": true,
-    "jasmine": true
+    "jasmine": true,
+    "jest": true
   },
   "globals": {
     "__API_URI__": false,

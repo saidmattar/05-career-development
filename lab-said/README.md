@@ -1,4 +1,3 @@
-
 #### UI Challenge  
 * created the wirefime.png using html and css on codepen and submit a link  
 
