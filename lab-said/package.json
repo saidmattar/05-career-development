@@ -1,7 +1,7 @@
 {
-  "name": "lab-ian",
+  "name": "lab-said",
   "version": "1.0.0",
-  "description": "Lab 5 for Code Fellows 401 Advanced JavaScript",
+  "description": "401 lab4-goat",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -21,29 +21,13 @@
     }
   },
   "scripts": {
-    "test": "jest --verbose",
+    "test": "jest",
     "test:watch": "jest --watchAll",
-    "lint": "elint .",
+    "lint": "eslint .",
     "lint:test": "npm run lint && npm test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ianwaites/05-career-development.git"
-  },
-  "keywords": [
-    "Node",
-    "Jest",
-    "Vanilla",
-    "Methods",
-    "Array",
-    "JavaScript"
-  ],
-  "author": "Ian Waites",
+  "author": "said",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ianwaites/05-career-development/issues"
-  },
-  "homepage": "https://github.com/ianwaites/05-career-development#readme",
   "devDependencies": {
     "eslint": "^4.5.0",
     "jest": "^20.0.4"
